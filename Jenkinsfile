@@ -24,7 +24,7 @@ pipeline{
 				steps{
 					echo 'Maven Build and Deploy to Exchange Done'
 				}
-			
+			}
 			}
 				
 		}

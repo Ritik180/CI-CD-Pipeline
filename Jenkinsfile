@@ -1,12 +1,6 @@
 pipeline{
 	agent any
 	stages{
-		stage('STEP 3'){
-			steps{
-				echo "${WORKSPACE}"
-				
-			}
-		}
 		stage('Clone'){
 			steps{
 			dir("D:\\CloneDIR\\version_$BUILD_ID") {
@@ -14,6 +8,25 @@ pipeline{
 				}
 				echo "$BUILD_ID"
 			}
+			stage('Bootstrap Target Configuration'){
+				steps{
+					echo 'Bootstrap Done'
+				}
+			stage('Set Version'){
+				steps{
+					echo 'Set Version Done'
+				}
+			stage('MUnit Test'){
+				steps{
+					echo 'MUnit Test Done'
+				}
+			stage('Maven Build and Deploy to Exchange'){
+				steps{
+					echo 'Maven Build and Deploy to Exchange Done'
+				}
+			
+			}
+				
 		}
 	}
 }
